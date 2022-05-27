@@ -15,16 +15,16 @@ import java.util.Set;
 //2 parameters - Arrays - no size limit
 //Return True or False
 public class Google {
-    public static  boolean FindCommonIteams(String[] array1, String[] array2){
+    public static  boolean FindCommonIteams(Object[] array1, Object[] array2){
         //Create two hashsets and add elements from arrays to those sets
-        Set<String> set1 = new HashSet<>();
-        Set<String> set2 = new HashSet<>();
+        Set<Object> set1 = new HashSet<>();
+        Set<Object> set2 = new HashSet<>();
 
-        for (int i =0;i<array1.length;i++) {
-            set1.add(array1[i]);
+        for (Object obj1: array1) {
+            set1.add(obj1);
         }
-        for (int j =0;j<array2.length;j++) {
-            set2.add(array2[j]);
+        for (Object obj2: array2) {
+            set2.add(obj2);
         }
         //after adding elemnts
         //Find the common elements in both the sets using Collection.retainAll() method.
